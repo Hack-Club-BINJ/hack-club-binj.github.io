@@ -39,10 +39,10 @@
           <div class="card-body">
             <h5 class="card-title">Step 1. Workshops!</h5>
             <p class="card-text">
-              We organize workshops for students to learn the basics of programming, such as
-              HTML/CSS and JavaScript. We bring Hack Club workshops such as
-              <a href="https://boba.hackclub.com/" target="_blank">Boba Drops</a> to teach
-              programming in a rewarding way.
+              We organize workshops for you to learn the basics of programming, such as how to make
+              a website or a game. We bring Hack Club workshops such as
+              <a href="https://boba.hackclub.com/" target="_blank">Boba Drops</a> to you, where you
+              not only learn, but also get cool rewards!
             </p>
           </div>
         </div>
@@ -52,9 +52,9 @@
           <div class="card-body">
             <h5 class="card-title">Step 2. Projects!</h5>
             <p class="card-text">
-              After the basics, we help students start their own coding projects. We guide them to
-              think about real-world problems they are passionate about solving. We also introduce
-              cool Hack Club events such as
+              After the basics, we help you start your own coding projects. We guide you to think
+              about real-world problems you are passionate about solving. If you need inspiration,
+              we also introduce cool Hack Club events such as
               <a href="https://sprig.hackclub.com/" target="_blank">Sprig</a>!
             </p>
           </div>
@@ -66,8 +66,8 @@
             <h5 class="card-title">Step 3. Share!</h5>
             <p class="card-text">
               What's the point of making something if you don't share it with others? We encourage
-              (and help!) our students to share their projects, not only with the club, but also
-              with the world!
+              (and help!) you to share their projects, not only with the club, but also with the
+              world, so that everyone can see and benefit from your hard work!
             </p>
           </div>
         </div>
