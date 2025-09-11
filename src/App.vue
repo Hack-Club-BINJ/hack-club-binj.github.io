@@ -42,7 +42,7 @@ const isNavbarExpanded = computed(() => navbarCollapse.value?.classList.contains
       </div>
     </div>
   </nav>
-  <main>
+  <main class="mb-4">
     <RouterView />
   </main>
 </template>
