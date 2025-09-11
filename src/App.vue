@@ -7,17 +7,11 @@ const isNavbarExpanded = computed(() => navbarCollapse.value?.classList.contains
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+  <nav class="navbar navbar-expand-md bg-body-tertiary shadow-sm">
     <div class="container-fluid px-4">
-      <RouterLink class="navbar-brand" to="/">
-        <img
-          src="@/assets/icon.png"
-          alt="Logo"
-          width="24"
-          height="24"
-          class="d-inline-block align-text-top me-2"
-        />
-        <strong class="title-gradient">Hack Club BINJ</strong>
+      <RouterLink class="navbar-brand d-flex align-items-center gap-2" to="/">
+        <img src="@/assets/icon256.png" alt="Logo" width="24" height="24" />
+        <span class="gradient-text fw-semibold">Hack Club BINJ</span>
       </RouterLink>
       <button
         class="navbar-toggler"
@@ -48,16 +42,7 @@ const isNavbarExpanded = computed(() => navbarCollapse.value?.classList.contains
       </div>
     </div>
   </nav>
-  <main class="container mt-4">
-    <h1>Welcome to Hack Club BINJ</h1>
+  <main>
+    <RouterView />
   </main>
 </template>
-
-<style scoped>
-.title-gradient {
-  background: linear-gradient(135deg, orange, red);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
