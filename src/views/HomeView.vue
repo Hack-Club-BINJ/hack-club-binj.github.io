@@ -16,8 +16,14 @@ import projects from '@/assets/projects.json'
       <span class="text-muted fs-5"><i class="bi bi-pin-map-fill"></i> BINJ C513</span>
       <span class="text-muted fs-5"><i class="bi bi-person-badge-fill"></i> David Wang</span>
     </div>
-    <div class="mt-4">
-      <RouterLink class="btn btn-primary btn-lg me-4" to="/join">Join us!</RouterLink>
+    <div class="mt-4 d-flex justify-content-center flex-wrap gap-4">
+      <RouterLink class="btn btn-primary btn-lg" to="/join">Join us!</RouterLink>
+      <a
+        class="btn btn-outline-primary btn-lg"
+        href="https://dashboard.hackclub.com/club-dashboard/290"
+        target="_blank"
+        >Dashboard <i class="bi bi-box-arrow-up-right"></i
+      ></a>
       <a class="btn btn-outline-secondary btn-lg" href="https://hackclub.com/" target="_blank"
         >Learn about Hack Club <i class="bi bi-box-arrow-up-right"></i
       ></a>
@@ -27,14 +33,14 @@ import projects from '@/assets/projects.json'
     <div class="row gy-2">
       <div class="col-12 col-lg-3 text-lg-end text-primary">
         <h2 class="d-none d-lg-block">
-          Where <br />
+          <span>Where</span> <br />
           <span class="text-stroke-2">growth</span> <br />
-          happens.
+          <span>happens.</span>
         </h2>
         <h2 class="d-lg-none">
-          Where
+          <span>Where</span>
           <span class="text-stroke-2">growth</span>
-          happens.
+          <span>happens.</span>
         </h2>
         <p class="text-secondary">* You learn best by making.</p>
       </div>
