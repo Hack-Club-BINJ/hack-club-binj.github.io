@@ -47,13 +47,24 @@ import members from '@/assets/members.json'
       ><sup>*</sup> Text adapted from the
       <a href="https://hackclub.com/philosophy/" target="_blank">Hack Club Philosophy</a>.</small
     >
-    <h2 class="mt-2">Club Members</h2>
+    <h2 class="mt-2">Meet our club.</h2>
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4 mb-4" v-for="member in members" :key="member.name">
         <div class="card">
           <div class="card-body">
             <div class="card-title d-flex align-items-center">
-              <img :src="member.avatar" class="rounded-circle avatar" :alt="member.name" />
+              <img
+                :src="member.avatar"
+                class="rounded-circle avatar"
+                :alt="member.name"
+                v-if="member.avatar"
+              />
+              <img
+                src="@/assets/avatar.jpg"
+                class="rounded-circle avatar"
+                :alt="member.name"
+                v-else
+              />
               <div>
                 <h5 class="mb-1">{{ member.name }}</h5>
                 <h6 class="mb-0">{{ member.position }}</h6>
