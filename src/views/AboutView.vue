@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import members from '@/assets/members.json'
+</script>
+
 <template>
   <div class="text-center bg-wavy pt-5 pb-5 mb-5">
     <h1>
@@ -43,11 +47,34 @@
       ><sup>*</sup> Text adapted from the
       <a href="https://hackclub.com/philosophy/" target="_blank">Hack Club Philosophy</a>.</small
     >
+    <h2 class="mt-2">Club Members</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-4" v-for="member in members" :key="member.name">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title d-flex align-items-center">
+              <img :src="member.avatar" class="rounded-circle avatar" :alt="member.name" />
+              <div>
+                <h5 class="mb-1">{{ member.name }}</h5>
+                <h6 class="mb-0">{{ member.position }}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .about-us-page {
   font-size: 1.25rem;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+  vertical-align: middle;
 }
 </style>
