@@ -18,6 +18,11 @@ const router = createRouter({
       name: 'feed',
       component: () => import('../views/FeedView.vue'),
     },
+    {
+      path: '/post',
+      name: 'post',
+      component: () => import('../views/PostView.vue'),
+    },
   ],
 })
 
