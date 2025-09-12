@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center bg-body-secondary pt-5 pb-5 mb-5">
+  <div class="text-center bg-wavy pt-5 pb-5 mb-5">
     <h1>
       <span class="gradient-text">About Us</span>
     </h1>

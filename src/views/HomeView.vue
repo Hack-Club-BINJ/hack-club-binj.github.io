@@ -3,7 +3,7 @@ import projects from '@/assets/projects.json'
 </script>
 
 <template>
-  <div class="text-center bg-body-secondary pt-5 pb-5 mb-5">
+  <div class="text-center pt-5 pb-5 mb-5 bg-wavy">
     <h1>
       <span
         class="text-primary-light text-stroke-2 text-stroke-sm-3 text-stroke-md-4 text-stroke-lg-5"
