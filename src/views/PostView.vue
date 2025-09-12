@@ -1,33 +1,51 @@
 <script setup lang="ts">
 import posts from '@/assets/posts.json'
+import PostCard from '@/components/PostCard.vue'
 import { computed, ref } from 'vue'
 
 const title = ref('')
 const author = ref('')
 const content = ref('')
+const imageUrls = ref<string[]>([''])
+
+const newPost = computed(() => {
+  return {
+    author: author.value,
+    title: title.value,
+    date: currentDate.value,
+    content: content.value,
+    images: imageUrls.value.filter((url) => !!url),
+  }
+})
+
+const shouldShowPreview = computed(() => {
+  return !!title.value || !!author.value || !!content.value
+})
 
 const currentDate = computed(() => {
   const date = new Date()
-  return `${date.getFullYear()}-${date.getMonth().toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
+  return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
 })
 
 const updatedPosts = computed(() => {
   if (!title.value || !author.value || !content.value) return null
-  return posts.concat([
-    {
-      author: author.value,
-      title: title.value,
-      date: currentDate.value,
-      content: content.value,
-      images: [],
-    },
-  ])
+  return [newPost.value].concat(posts)
 })
 
 const displayUpdatedPosts = computed(() => {
   if (!updatedPosts.value) return null
   return JSON.stringify(updatedPosts.value, null, 4)
 })
+
+// events
+
+function onRemoveImage(index: number) {
+  imageUrls.value.splice(index, 1)
+}
+
+function onAddImage() {
+  imageUrls.value.push('')
+}
 </script>
 
 <template>
@@ -74,6 +92,32 @@ const displayUpdatedPosts = computed(() => {
         style="height: 10rem"
         v-model="content"
       ></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label fw-semibold" for="inputImage0">Images</label>
+      <div class="input-group mb-3" v-for="(url, index) in imageUrls" :key="index">
+        <input
+          class="form-control"
+          :id="`inputImage${index}`"
+          type="url"
+          placeholder="Enter image URL (you can upload images on Slack in #cdn)"
+          v-model="imageUrls[index]"
+        />
+        <button
+          class="btn btn-outline-danger"
+          @click="onRemoveImage(index)"
+          v-if="imageUrls.length > 1"
+        >
+          <i class="bi bi-trash-fill"></i>
+        </button>
+        <button class="btn btn-outline-success" @click="onAddImage" v-if="index === 0">
+          <i class="bi bi-plus-square"></i>
+        </button>
+      </div>
+    </div>
+    <div v-if="shouldShowPreview">
+      <h2>Preview</h2>
+      <PostCard class="mb-3" :post="newPost" />
     </div>
     <div v-if="updatedPosts">
       <h2>How to add this post</h2>
