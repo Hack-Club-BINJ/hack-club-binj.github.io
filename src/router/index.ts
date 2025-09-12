@@ -13,6 +13,11 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue'),
     },
+    {
+      path: '/feed',
+      name: 'feed',
+      component: () => import('../views/FeedView.vue'),
+    },
   ],
 })
 

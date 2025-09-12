@@ -3,12 +3,14 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import yaml from '@rollup/plugin-yaml'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    yaml(),
   ],
   resolve: {
     alias: {
@@ -17,13 +19,13 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-       scss: {
-         silenceDeprecations: [
-           'import',
-           'color-functions',
-           'global-builtin',
-         ],
-       },
+      scss: {
+        silenceDeprecations: [
+          'import',
+          'color-functions',
+          'global-builtin',
+        ],
+      },
     },
- },
+  },
 })

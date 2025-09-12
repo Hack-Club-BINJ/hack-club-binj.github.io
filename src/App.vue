@@ -38,6 +38,9 @@ const isNavbarExpanded = computed(() => navbarCollapse.value?.classList.contains
               ><i class="bi bi-info-circle-fill"></i> About</RouterLink
             >
           </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/feed"><i class="bi bi-rss-fill"></i> Feed</RouterLink>
+          </li>
         </ul>
       </div>
     </div>

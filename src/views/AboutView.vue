@@ -67,7 +67,7 @@ import members from '@/assets/members.json'
               />
               <div>
                 <h5 class="mb-1">{{ member.name }}</h5>
-                <h6 class="mb-0">{{ member.position }}</h6>
+                <h6 class="mb-0 text-secondary fw-medium">{{ member.position }}</h6>
               </div>
             </div>
           </div>
