@@ -5,15 +5,16 @@ $primary: #1A3B84;
 $font-family-base: "Phantom Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 $font-family-sans-serif: "Phantom Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-$font-size-base: 1rem;
-$h1-font-size: $font-size-base * 7.5;
-$h2-font-size: $font-size-base * 3;
-$headings-font-weight: 600;
-
 @import "bootstrap/scss/functions";
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
+
+$font-size-base: 18px;
+$h1-font-size: $font-size-base * 6.5;
+$h2-font-size: $font-size-base * 2.5;
+$headings-font-weight: 600;
+
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
@@ -74,6 +75,30 @@ $utilities: map-merge($utilities, ("color": map-merge(map-get($utilities, "color
   --color-primary-light: #5A7BBF;
   --bs-text-stroke-width: 0px;
   --bs-text-fill-color: initial;
+  --gradient-start: var(--color-primary-light);
+  --gradient-end: var(--color-primary);
+
+  // Palette from https://css.hackclub.com/
+  --black: #1f2d3d;
+  --steel: #273444;
+  --slate: #3c4858;
+  --muted: #8492a6;
+  --smoke: #e0e6ed;
+  --snow: #f9fafc;
+  --white: #ffffff;
+  --red: #ec3750;
+  --orange: #ff8c37;
+  --yellow: #f1c40f;
+  --green: #33d6a6;
+  --cyan: #5bc0de;
+  --blue: #338eda;
+  --purple: #a633d6;
+  --primary: #ec3750;
+  --secondary: #8492a6;
+  --accent: #5bc0de;
+  --twitter: #1da1f2;
+  --facebook: #3b5998;
+  --instagram: #e1306c;
 }
 
 * {
@@ -83,35 +108,13 @@ $utilities: map-merge($utilities, ("color": map-merge(map-get($utilities, "color
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-@font-face {
-  font-family: 'Phantom Sans';
-  src: url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff') format('woff'),
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Phantom Sans';
-  src: url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff') format('woff'),
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Phantom Sans';
-  src: url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff') format('woff'),
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+.gradient-hack-club {
+  --gradient-start: #ff3c00;
+  --gradient-end: #ffcc00;
 }

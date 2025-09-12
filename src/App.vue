@@ -7,7 +7,7 @@ const isNavbarExpanded = computed(() => navbarCollapse.value?.classList.contains
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md bg-body-tertiary shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-body-tertiary shadow-sm">
     <div class="container-fluid px-4">
       <RouterLink class="navbar-brand d-flex align-items-center gap-2" to="/">
         <img src="@/assets/icon256.png" alt="Logo" width="24" height="24" />

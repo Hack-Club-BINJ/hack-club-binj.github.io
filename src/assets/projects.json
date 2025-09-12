@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Hack Club BINJ Website",
+        "description": "This very website you are browsing!",
+        "image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/bd883d0809f07649647acea952648404d2448192_image.png",
+        "links": [
+            {
+                "name": "Visit Website",
+                "link": "#"
+            }
+        ]
+    }
+]

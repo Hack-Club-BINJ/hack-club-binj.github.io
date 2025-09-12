@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import projects from '@/assets/projects.json'
+</script>
+
 <template>
   <div class="text-center bg-body-secondary pt-5 pb-5 mb-5">
     <h1 style="font-weight: 700">
@@ -15,12 +19,12 @@
     <div class="mt-4">
       <RouterLink class="btn btn-primary btn-lg me-4" to="/join">Join us!</RouterLink>
       <a class="btn btn-outline-secondary btn-lg" href="https://hackclub.com/" target="_blank"
-        >Learn about Hack Club</a
-      >
+        >Learn about Hack Club <i class="bi bi-box-arrow-up-right"></i
+      ></a>
     </div>
   </div>
   <div class="container">
-    <div class="ps-4 pe-4 row gy-2">
+    <div class="row gy-2">
       <div class="col-12 col-lg-3 text-lg-end text-primary">
         <h2 class="d-none d-lg-block">
           Where <br />
@@ -73,18 +77,42 @@
         </div>
       </div>
     </div>
+    <h2 class="mt-4">What we've built</h2>
+    <div class="row flex-wrap">
+      <div class="col-12 col-md-6 col-lg-4" v-for="project in projects" :key="project.name">
+        <div class="card">
+          <img
+            v-if="project.image"
+            class="card-img-top"
+            :src="project.image"
+            :alt="`Image for project ${project.name}`"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <a
+              class="card-link"
+              :href="link.link"
+              v-for="link in project.links || []"
+              :key="link.name"
+              >{{ link.name }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .property-list {
   margin-inline-start: 1rem;
-}
-.property-list > span {
-  margin-inline-end: 1rem;
-}
-.property-list > span:not(:first-child)::before {
-  content: '•';
-  margin-inline-end: 1rem;
+  > span {
+    margin-inline-end: 1rem;
+    &:not(:first-child)::before {
+      content: '•';
+      margin-inline-end: 1rem;
+    }
+  }
 }
 </style>
