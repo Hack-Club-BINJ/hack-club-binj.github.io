@@ -1,4 +1,5 @@
 {
+    "$schema": "./node_modules/wrangler/config-schema.json",
     "compatibility_date": "2025-09-01",
     "name": "hack-club-binj",
     "observability": {
@@ -6,5 +7,6 @@
     },
     "assets": {
         "directory": "./dist"
-    }
+    },
+    "workers_dev": false
 }
