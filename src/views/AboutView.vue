@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import members from '@/assets/members.json'
+import AvatarImage from '@/components/AvatarImage.vue'
 </script>
 
 <template>
@@ -53,18 +54,7 @@ import members from '@/assets/members.json'
         <div class="card">
           <div class="card-body">
             <div class="card-title d-flex align-items-center">
-              <img
-                :src="member.avatar"
-                class="rounded-circle avatar"
-                :alt="member.name"
-                v-if="member.avatar"
-              />
-              <img
-                src="@/assets/avatar.jpg"
-                class="rounded-circle avatar"
-                :alt="member.name"
-                v-else
-              />
+              <AvatarImage :src="member.avatar" :alt="member.name" />
               <div>
                 <h5 class="mb-1">{{ member.name }}</h5>
                 <h6 class="mb-0 text-secondary fw-medium">{{ member.position }}</h6>
@@ -80,12 +70,5 @@ import members from '@/assets/members.json'
 <style scoped>
 .about-us-page {
   font-size: 1.25rem;
-}
-.avatar {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  object-fit: cover;
-  vertical-align: middle;
 }
 </style>

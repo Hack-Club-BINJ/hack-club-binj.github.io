@@ -23,6 +23,11 @@ const router = createRouter({
       name: 'post',
       component: () => import('../views/PostView.vue'),
     },
+    {
+      path: '/boba',
+      name: 'boba',
+      component: () => import('../views/BobaListView.vue'),
+    },
   ],
 })
 

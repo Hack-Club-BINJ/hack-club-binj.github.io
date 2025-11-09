@@ -1,0 +1,10 @@
+{
+    "compatibility_date": "2025-09-01",
+    "name": "hack-club-binj",
+    "observability": {
+        "enabled": true
+    },
+    "assets": {
+        "directory": "./dist"
+    }
+}

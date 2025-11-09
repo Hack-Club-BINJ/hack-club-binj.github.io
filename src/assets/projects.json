@@ -9,5 +9,16 @@
                 "link": "#"
             }
         ]
+    },
+    {
+        "name": "Boba Drops",
+        "description": "The websites our members made for boba.",
+        "image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/1b6fff48c170f66eedfe209be157e44232b649db_screenshot_2025-11-09_at_14.52.54.png",
+        "links": [
+            {
+                "name": "Browse",
+                "link": "/boba"
+            }
+        ]
     }
 ]

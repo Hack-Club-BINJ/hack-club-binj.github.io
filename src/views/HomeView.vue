@@ -90,7 +90,7 @@ import projects from '@/assets/projects.json'
       </div>
     </div>
     <h2 class="mt-4">What we've built</h2>
-    <div class="row flex-wrap">
+    <div class="row flex-wrap g-2">
       <div class="col-12 col-md-6 col-lg-4" v-for="project in projects" :key="project.name">
         <div class="card">
           <img
@@ -126,5 +126,11 @@ import projects from '@/assets/projects.json'
       margin-inline-end: 1rem;
     }
   }
+}
+/* https://stackoverflow.com/a/67356788/13951118 */
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: contain;
 }
 </style>
