@@ -20,5 +20,16 @@
                 "link": "/boba"
             }
         ]
+    },
+    {
+        "name": "Run!",
+        "description": "A game where you run!",
+        "image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/869c3662f791875ff637e6c697b97e2aa17d7fa8_screenshot_2025-11-09_at_15.13.57.png",
+        "links": [
+            {
+                "name": "Play",
+                "link": "https://micky-game.binj.dev"
+            }
+        ]
     }
 ]
