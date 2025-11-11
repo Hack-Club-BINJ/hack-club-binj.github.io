@@ -7,6 +7,21 @@
         "boba_image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/60a40c2b3ffd629af84d786535a8236a16b678ac_screenshot_2025-11-09_at_14.51.22.png"
     },
     {
+        "name": "Micky Wang",
+        "position": "Member",
+        "avatar": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/57aa700889ac0567d7739770b35f90a0bebe1412_avatar.jpeg",
+        "website": "https://ykcim.hackclub.app",
+        "boba": "https://hackclub.space/s/micky_website",
+        "boba_image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/a521985cfa1d90d638113c975b7976df9006b59a_screenshot_2025-11-09_at_14.53.55.png"
+    },
+    {
+        "name": "Tong Wu",
+        "position": "Member",
+        "website": "http://jiatongwu.com",
+        "boba": "https://hackclub.space/s/tong_1_space",
+        "boba_image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/7a84b89ab1b626871e28fd1294eeb17b26bbac00_screenshot_2025-11-09_at_14.51.52.png"
+    },
+    {
         "name": "Ewan Huang",
         "position": "Member"
     },
@@ -29,12 +44,6 @@
     {
         "name": "Jerry Zhang",
         "position": "Member"
-    },
-    {
-        "name": "Tong Wu",
-        "position": "Member",
-        "boba": "https://hackclub.space/s/tong_1_space",
-        "boba_image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/7a84b89ab1b626871e28fd1294eeb17b26bbac00_screenshot_2025-11-09_at_14.51.52.png"
     },
     {
         "name": "Cyril Chen",
@@ -89,13 +98,6 @@
     {
         "name": "Ethan Wu",
         "position": "Member"
-    },
-    {
-        "name": "Micky Wang",
-        "position": "Member",
-        "avatar": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/57aa700889ac0567d7739770b35f90a0bebe1412_avatar.jpeg",
-        "boba": "https://hackclub.space/s/micky_website",
-        "boba_image": "https://hc-cdn.hel1.your-objectstorage.com/s/v3/a521985cfa1d90d638113c975b7976df9006b59a_screenshot_2025-11-09_at_14.53.55.png"
     },
     {
         "name": "Ray Dai",

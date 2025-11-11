@@ -130,7 +130,11 @@ import projects from '@/assets/projects.json'
 /* https://stackoverflow.com/a/67356788/13951118 */
 .card-img-top {
   width: 100%;
-  height: 20vw;
   object-fit: contain;
+}
+@media screen and (min-width: 768px) {
+  .card-img-top {
+    height: 20vw;
+  }
 }
 </style>

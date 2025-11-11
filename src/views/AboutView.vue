@@ -56,7 +56,12 @@ import AvatarImage from '@/components/AvatarImage.vue'
             <div class="card-title d-flex align-items-center">
               <AvatarImage :src="member.avatar" :alt="member.name" />
               <div>
-                <h5 class="mb-1">{{ member.name }}</h5>
+                <h5 class="mb-1 d-flex gap-2">
+                  {{ member.name }}
+                  <a v-if="member.website" :href="member.website" target="_blank"
+                    ><i class="bi bi-box-arrow-up-right"></i
+                  ></a>
+                </h5>
                 <h6 class="mb-0 text-secondary fw-medium">{{ member.position }}</h6>
               </div>
             </div>
